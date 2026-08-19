@@ -4,6 +4,15 @@ A complete, production-quality **Healthcare Appointment & Follow-up Manager** we
 
 ---
 
+## 🌐 Live Hosted Application & Deployment URLs
+
+- **GitHub Repository**: [https://github.com/Anubhav7070/HealthCare_Unthinkable](https://github.com/Anubhav7070/HealthCare_Unthinkable)
+- **Live Public URL**: [https://tall-moles-stop.loca.lt](https://tall-moles-stop.loca.lt)
+- **Local Application App**: `http://localhost:3000`
+- **Local Backend API**: `http://localhost:5000`
+
+---
+
 ## 🌟 Features Overview
 
 - **Multi-Role Portals**: Dedicated UI views and permissions for **Patient**, **Doctor**, and **Admin**.
@@ -16,19 +25,6 @@ A complete, production-quality **Healthcare Appointment & Follow-up Manager** we
 - **Doctor Leave Management**: Automated conflict detection on leave creation, notifying affected patients by email with cancellation/reschedule instructions and alternate slot suggestions.
 - **Medication Reminders**: Parses prescription dose frequencies (e.g., "twice daily for 7 days") and schedules automated reminder emails.
 - **Google Calendar Sync**: Integrates OAuth 2.0 to create, update, and delete calendar events without blocking DB transactions.
-
----
-
-## 🏗️ Technology Stack & Justification
-
-| Layer | Technology | Justification |
-| :--- | :--- | :--- |
-| **Backend** | Node.js + Express (TypeScript) | Fast asynchronous execution, strongly typed contracts, and easy integration with background jobs. |
-| **Database** | PostgreSQL / SQLite + Prisma ORM | Relational integrity, row locking support, atomic transactions, and clean schema migrations. |
-| **Frontend** | React (Vite + TypeScript) + CSS | Modular component hierarchy, fast Vite HMR development, and custom glassmorphism design system. |
-| **Auth** | JWT + Role-Based Access Control | Stateless, scalable authentication supporting `PATIENT`, `DOCTOR`, and `ADMIN` roles. |
-| **LLM Layer** | Swappable Service (OpenAI API / Mock) | Encapsulated service layer with strict JSON schema parsing and zero-downtime fallback. |
-| **Email/Jobs** | Async Job Queue + Retry Logger | Exponential backoff retries (max 3 attempts) and persistent audit logging in `notification_logs`. |
 
 ---
 
