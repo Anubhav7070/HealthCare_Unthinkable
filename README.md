@@ -7,7 +7,7 @@ A complete, production-quality **Healthcare Appointment & Follow-up Manager** we
 ## 🌐 Live Hosted Application & Deployment URLs
 
 - **GitHub Repository**: [https://github.com/Anubhav7070/HealthCare_Unthinkable](https://github.com/Anubhav7070/HealthCare_Unthinkable)
-- **Live Public URL**: [https://tall-moles-stop.loca.lt](https://tall-moles-stop.loca.lt)
+- **Live Public URL**: [https://healthcareappointment.loca.lt](https://healthcareappointment.loca.lt)
 - **Local Application App**: `http://localhost:3000`
 - **Local Backend API**: `http://localhost:5000`
 
