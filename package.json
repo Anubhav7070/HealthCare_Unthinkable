@@ -1,0 +1,16 @@
+{
+  "name": "healthcare-appointment-manager",
+  "version": "1.0.0",
+  "description": "Healthcare Appointment & Follow-up Manager Monorepo",
+  "private": true,
+  "scripts": {
+    "setup": "npm --prefix backend install && npm --prefix frontend install",
+    "db:generate": "npm --prefix backend run prisma:generate",
+    "db:push": "npm --prefix backend run prisma:push",
+    "db:seed": "npm --prefix backend run prisma:seed",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "test": "npm --prefix backend test"
+  }
+}
