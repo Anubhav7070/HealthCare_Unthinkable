@@ -1,0 +1,19 @@
+services:
+  # Backend API Service
+  - type: web
+    name: healthcare-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install && npx prisma generate && npx prisma db push
+    startCommand: npx ts-node src/server.ts
+    envVars:
+      - key: DATABASE_URL
+        value: file:./dev.db
+      - key: JWT_SECRET
+        value: healthcare-jwt-secret-render-prod-2026
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: LLM_PROVIDER
+        value: mock
+      - key: PORT
+        value: 5000
