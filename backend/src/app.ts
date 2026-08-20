@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 import authRoutes from './routes/auth.routes';
 import adminRoutes from './routes/admin.routes';
 import patientRoutes from './routes/patient.routes';
@@ -24,9 +25,17 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString(), service: 'Healthcare Appointment & Follow-up Manager API' });
 });
 
-// Global 404 handler
-app.use((req, res) => {
-  res.status(404).json({ error: `Endpoint not found: ${req.method} ${req.url}` });
+// --- Serve Frontend Static Files (Production) ---
+const frontendDistPath = path.join(__dirname, '..', '..', 'frontend', 'dist');
+app.use(express.static(frontendDistPath));
+
+// SPA fallback: serve index.html for all non-API routes
+app.get('*', (req, res) => {
+  // Don't serve index.html for API routes that weren't matched
+  if (req.path.startsWith('/api/')) {
+    return res.status(404).json({ error: `Endpoint not found: ${req.method} ${req.url}` });
+  }
+  res.sendFile(path.join(frontendDistPath, 'index.html'));
 });
 
 export default app;

@@ -1,11 +1,11 @@
 services:
-  # Backend API Service
+  # Single combined service: Backend API + Frontend Static Files
   - type: web
-    name: healthcare-api
+    name: healthcare-unthinkable
     runtime: node
-    rootDir: backend
-    buildCommand: npm install && npx prisma generate && npx prisma db push
-    startCommand: npx ts-node src/server.ts
+    buildCommand: |
+      cd frontend && npm install && npm run build && cd ../backend && npm install && npx prisma generate && npx prisma db push && npx tsc
+    startCommand: cd backend && node dist/server.js
     envVars:
       - key: DATABASE_URL
         value: file:./dev.db
@@ -16,4 +16,6 @@ services:
       - key: LLM_PROVIDER
         value: mock
       - key: PORT
-        value: 5000
+        value: 10000
+      - key: NODE_ENV
+        value: production
