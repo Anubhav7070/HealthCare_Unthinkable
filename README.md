@@ -7,8 +7,9 @@ A complete, production-quality **Healthcare Appointment & Follow-up Manager** we
 ## 🌐 Live Hosted Application & Deployment URLs
 
 - **GitHub Repository**: [https://github.com/Anubhav7070/HealthCare_Unthinkable](https://github.com/Anubhav7070/HealthCare_Unthinkable)
-- **Live Public URL**: [https://healthcareappointment.loca.lt](https://healthcareappointment.loca.lt)
-- **Local Application App**: `http://localhost:3000`
+- **Live Hosted URL (Vercel)**: [https://health-care-unthinkable.vercel.app](https://health-care-unthinkable.vercel.app)
+- **One-Click Render Deploy**: [Deploy to Render](https://render.com/deploy?repo=https://github.com/Anubhav7070/HealthCare_Unthinkable)
+- **Local Application App**: `http://localhost:3000` (frontend dev) or `http://localhost:5000` (full production)
 - **Local Backend API**: `http://localhost:5000`
 
 ---
