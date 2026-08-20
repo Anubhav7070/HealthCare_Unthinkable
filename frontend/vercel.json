@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://healthcare-api.onrender.com/api/$1" },
+    { "source": "/api/(.*)", "destination": "https://healthcare-app-unthinkable.loca.lt/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
